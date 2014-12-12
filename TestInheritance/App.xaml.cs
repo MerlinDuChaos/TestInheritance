@@ -13,14 +13,6 @@ namespace TestInheritance
     /// </summary>
     public partial class App : Application
     {
-        public App()
-        {
-            InitializeComponent();
 
-            FrameworkElement.StyleProperty.OverrideMetadata(typeof(Window), new FrameworkPropertyMetadata
-            {
-                DefaultValue = FindResource(typeof(Window))
-            });
-        }
     }
 }

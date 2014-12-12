@@ -34,11 +34,5 @@ namespace ClassLibrary1
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(MyWindow), new FrameworkPropertyMetadata(typeof(MyWindow)));
         }
-
-        public MyWindow()
-        {
-            //this.Template = FindResource("MyWindowTemplate") as ControlTemplate;
-            //DefaultStyleKeyProperty.OverrideMetadata(typeof(MyWindow), new FrameworkPropertyMetadata(typeof(MyWindow)));
-        }
     }
 }
