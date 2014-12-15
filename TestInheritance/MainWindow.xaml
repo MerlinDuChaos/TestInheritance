@@ -5,6 +5,8 @@
              Title="MainWindow"
              Width="525"
              Height="350"
+             BorderBrush="Black"
+             BorderThickness="1"
              HeaderText="Test1234"
              ShowHeader="True">
     <Grid>

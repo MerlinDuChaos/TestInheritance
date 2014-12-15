@@ -3,6 +3,7 @@
                     xmlns:me="clr-namespace:ClassLibrary1">
 
     <Style TargetType="{x:Type me:MyWindow}">
+        <Setter Property="Background" Value="White" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type me:MyWindow}">
@@ -10,7 +11,7 @@
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
                         <DockPanel>
-                            <Grid DockPanel.Dock="Top">
+                            <Grid Background="Red" DockPanel.Dock="Top">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="200" />
                                     <ColumnDefinition Width="300" />
