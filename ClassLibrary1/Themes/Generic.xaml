@@ -2,22 +2,29 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:me="clr-namespace:ClassLibrary1">
 
+    <BooleanToVisibilityConverter x:Key="Bool2Vis" />
+    <me:DebugConverter x:Key="Debug" />
+
     <Style TargetType="{x:Type me:MyWindow}">
         <Setter Property="Background" Value="White" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type me:MyWindow}">
-                    <Border Background="{TemplateBinding Background}"
+                    <Border Name="b"
+                            Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
                         <DockPanel>
-                            <Grid Background="Red" DockPanel.Dock="Top">
+                            <Grid Background="Red"
+                                  DockPanel.Dock="Top"
+                                  Visibility="{TemplateBinding ShowHeader,
+                                                               Converter={StaticResource Bool2Vis}}">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="200" />
                                     <ColumnDefinition Width="300" />
                                 </Grid.ColumnDefinitions>
 
-                                <Image Grid.Column="0" Source="Images/logo.gif" />
+                                <Image Grid.Column="0" Source="/ClassLibrary1;component/Images/logo.gif" />
                                 <TextBlock Grid.Column="1" Text="{TemplateBinding HeaderText}" />
                             </Grid>
 
